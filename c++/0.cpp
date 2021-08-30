@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cout;
-using std::endl;
+using std::endl; //std中自带了max函数（std::max<int>(const int &__a, const int &__b)），不能用整个std命名空间
 template<typename T>
 T max(T a,T b){
 if (a>b)

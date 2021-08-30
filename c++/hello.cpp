@@ -1,8 +1,8 @@
-#include <stdio.h>
-
+#include <iostream>
+using namespace std;
 int main(){
     int a=20,b=10;
-    int c=a>b?a:b;
-    printf("%d",c);
+    int d=max(a,b);
+    printf("%d",d);
     
 }
