@@ -1,4 +1,8 @@
 #include <stdio.h>
+
 int main(){
-    printf("Hello");
+    int a=20,b=10;
+    int c=a>b?a:b;
+    printf("%d",c);
+    
 }
