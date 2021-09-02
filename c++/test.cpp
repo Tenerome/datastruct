@@ -1,3 +1,4 @@
+//自定义的命名空间是没有cout,endl等函数的，这些是std空间的
 #include <iostream>
 namespace spaceA
 {
