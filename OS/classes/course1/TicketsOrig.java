@@ -1,4 +1,4 @@
-
+package classes.course1;
 
 public class TicketsOrig {
     public static void main(String args[]){
@@ -14,7 +14,4 @@ public class TicketsOrig {
         t2.start();
         t3.start();
     }
-}
-class Ticket{
-    public static int TCount=15;
 }
