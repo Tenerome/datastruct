@@ -1,4 +1,3 @@
-package classes.course1;
 public class CreateThread{
     public static  void main(String args[]){
         MyThread mt =new MyThread();

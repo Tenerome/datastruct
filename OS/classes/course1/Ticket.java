@@ -1,4 +1,4 @@
-package classes.course1;
-class Ticket{
+
+ class Ticket{
     public static int TCount=15;
 }

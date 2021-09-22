@@ -1,4 +1,3 @@
-package classes.course1;
 public class CreateThread2{
     public static void main(String args[]){
         Runnable r=()->{

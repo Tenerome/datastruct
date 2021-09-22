@@ -1,4 +1,4 @@
-package classes.course1;
+
 
 public class MyThread extends Thread{
     public void run(){
