@@ -1,46 +1,43 @@
 //todo  怎么输入输出不确定长度的数组，指针
+// ？ 对于a[6]，len=7，a[100],len=6
 #include<iostream>
-#define  Max 100000;
+#define  Max 1000;
 using namespace std;
 
-int length(int *p)
-{ //获取数组长度函数
-    int len;
-    while (*p)
-    {
-        p++;
-        len++;
-    }
-    return len;
+void prin(int *p){//输出
+   while (*p)
+   {
+      cout<<*p<<" ";
+      p++;
+   }
+   cout<<endl;
+   
 }
-void prin(int a[],int len){
-    for(int i=0;i<len;i++)
-        cout<<*(p+i);
-}
-void sort(int *p){
-    int i=0;
-    while(*p){
+void chg(int *p){
+    int i=0,j;//查找并改变所有重复值
     while(*(p+i)){
-        if(*p==*(p+i))
-        *(p+i)=Max;
+    j=i+1;
+    while(*(p+j)){
+        if(*(p+i)==*(p+j))
+        *(p+j)=Max;
+        j++;
     }
-    p++;
+   i++;
+    }
+}
+void del(int *p){//删除,本质是不输出Max
+    while(*p){
+        if(*p!=1000)
+            cout<<*p<<" ";
+        p++;
     }
 }
 int main(){
-    int a[6]={1,2,2,1,2,2},b,i=0;
-    int len=length(a);
-    //  while (1)
-    // {
-    //     cin>>b;
-    //     if(b<0)
-    //         break;
-    //     else
-    //         a[i++]=b;
-       
-    // }
-    prin(a,len);
-    // sort(a);
-    // prin(a);
+    int a[100]={2,2,2,3,4,4,5,6,6,6,6,7,7,8,9,9,10,10,10};
+    cout<<"primary array:"<<endl;
+    prin(a);
+    chg(a);
+    cout<<"changed:"<<endl;
+    del(a);
     
 }
