@@ -3,14 +3,14 @@
 <html>
 <head>
 <title>
-成功
+失败
 </title>
 <style>
 
 </style>
 </head>
 <body>
-欢迎！
+输入有误！<a href="1.jsp">返回</a>
 
 </body>
 </html>

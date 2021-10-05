@@ -3,14 +3,19 @@
 <html>
 <head>
 <title>
-成功
+
 </title>
 <style>
 
 </style>
 </head>
 <body>
-欢迎！
+<%
+String id=request.getParameter("id");
+String name=request.getParameter("name");
 
+out.println("您的学号:"+id);
+out.println("您的姓名:"+name);
+%>
 </body>
 </html>
