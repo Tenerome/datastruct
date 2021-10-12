@@ -19,3 +19,9 @@ for(i=0;i<=7;i++)
 printf("%d\n",a[i]);
 
 }
+static int i;
+void sum(){
+	i+=i;
+	if(i<=100)
+		sum();
+}
