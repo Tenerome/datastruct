@@ -1,27 +1,14 @@
-#include<math.h>
 #include<stdio.h>
-int   is_prime(int n)
-{
-     int j=0;
-     for(j=2;j<n;j++)
+    #include<string.h>
+    int main(){
 
-    {
+  
 
-     if(n%j==0)
-          return 1;
-    }
-           
-}
-
-int main(){
-
-    int   i=0;
-    for(i=100;i<=200;i++)
-    {
-     if(is_prime(i)==1)
-        printf("%d ",i);
-
+      double  pi=3.1415926;
+      double   r=3;
+      double   S=pi*r*r;
+     printf("陈星圆的面积%f\n",S);
+       return 0;
+    
 
     }
-    return 0;
-}
