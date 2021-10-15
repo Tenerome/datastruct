@@ -3,7 +3,9 @@
 using namespace std;
 
 Personnel::Personnel(){
-   
+   num=0;
+   name="姓名";
+   sex="性别";
 }
 Personnel::Personnel(const Personnel &another){
   num=another.num;

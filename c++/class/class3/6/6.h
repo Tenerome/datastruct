@@ -4,8 +4,8 @@
 using namespace std;
 class Personnel{
     int num;
-    std::string name;
-    std::string sex;
+    string name;
+    string sex;
 
     public:
     Personnel();//构造函数
