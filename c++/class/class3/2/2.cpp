@@ -1,14 +1,11 @@
-#include<iostream>
-#include<string>
-using namespace std;
+#include"iostream"
 #include "2.h"
-extern int num;
-extern string name;
-extern char sex;
+using namespace std;
+
 void A::setValue(){
-    cin>>num;
-    cin>>name;
-    cin>>sex;
+    num=123;
+    name="张三";
+    sex="男";
 }
 
 void A::display(){
