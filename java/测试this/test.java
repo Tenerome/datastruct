@@ -1,8 +1,12 @@
 
 
-public class test {
+public class test {private float y;
+private static String[] args;
+
     public static void main(String args[]) {
-        thistest cc = new thistest();
+        test.args = args;
+        thistest 
+    this.y = t;cc = new thistest();
         int x = 89;
         cc.setA(x);
         System.out.println(cc.getA());
