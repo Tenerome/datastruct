@@ -1,3 +1,4 @@
+//课后题第三章 5
 #include"iostream"
 using namespace std;
 class student{
@@ -24,13 +25,11 @@ student::student(int sno,int grade){
 }
 
 student Max(student *p){
-    int max=(*p).getGrade();
     student maxstu=*p;
     while ((*p).getSno())
     {
-        if((*p).getGrade()>max)
+        if((*p).getGrade()>maxstu.getGrade())
         {
-             max=(*p).getGrade();
              maxstu=*p;
         }
         p++;
