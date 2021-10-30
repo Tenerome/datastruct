@@ -17,7 +17,7 @@ class shop{
     shop(int,float);
 };
 //shop函数实现
-float shop::discount=0.85;
+float shop::discount=0.5;
 float shop::sum=0;
 int shop::n=0;
 shop::shop(int quantity,float price){
@@ -28,7 +28,7 @@ float shop::average(){
      return sum/n;
 }
 void shop::cal(){
-    if(shop::quantity>10)
+    if(quantity>10)
         price*=0.98;
     sum+=price*quantity*discount;
     n+=quantity;
@@ -46,6 +46,6 @@ int main(){
     sh[0].cal();
     sh[1].cal();
     sh[2].cal();
-    sh[2].display();
+    shop::display();
 
 }
