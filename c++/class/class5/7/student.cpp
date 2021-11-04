@@ -1,12 +1,13 @@
+//第四章 7
 #include"iostream"
 using namespace std;
 
 class student{
 int num;
-string name,sex;
+string name,sex,major;
 public:
 student();
-student(int,string,string);
+student(int,string,string,string major);
 void disp();
 friend class teacher;
 };
@@ -24,15 +25,17 @@ student::student(){
     num=0;
     name="张三";
     sex="男";
+    major="无";
 }
-student::student(int num,string name,string sex){
+student::student(int num,string name,string sex,string major){
     this->name=name;
     this->num=num;
     this->sex=sex;
+    this->major=major;
 }
 void student::disp(){
     cout<<"学生信息:"<<endl;
-    cout<<"学号:"<<num<<endl<<"姓名:"<<name<<endl<<"性别:"<<sex<<endl;
+    cout<<"学号:"<<num<<endl<<"姓名:"<<name<<endl<<"性别:"<<sex<<endl<<"专业:"<<major<<endl<<endl;
 }
 
 teacher::teacher(){
@@ -58,7 +61,7 @@ void teacher::disp(){
 }
 
 int main(){
-    student stu(1023,"胡图图","男");
+    student stu(1023,"胡图图","男","计算机");
     stu.disp();
     teacher teac;
     teac=teac%stu;

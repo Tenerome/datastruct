@@ -43,7 +43,7 @@ class complex{
        return c1;
    }
 
-double main(){
+int main(){
     complex c1(2,3),c2(2,5),c3;
     c3=c1+c2;
     c3.disp();
