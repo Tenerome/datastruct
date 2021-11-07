@@ -1,5 +1,5 @@
-package entity;
 
+import javax.print.FlavorException;
 import javax.servlet.http.HttpServletRequest;
 
 public class student {
@@ -24,9 +24,15 @@ public class student {
     }
 
     public student() { // ok
-        this("0", "张三", "男", "五", "0");
+        this("", "", "", "", "");
     }
 
+    public boolean isAllEmpty(){
+        if(this.sno.equals("")&&this.sname.equals("")&&this.ssex.equals("")&&this.smajor.equals("")&&this.sgrade.equals(""))
+            return true;
+        else
+            return false;
+    }
     public String getSno() {
         return sno;
     }
