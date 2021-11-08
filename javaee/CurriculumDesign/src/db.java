@@ -1,5 +1,4 @@
-package entity;
-import entity.student.*;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -161,7 +160,7 @@ public class db {
 		String html="";
 		List<student> students = getStudents(stu,page,record);
 		html+="<div>\n";
-		html+="<table align='center'>\n";
+		html+="<table align='center' border='2'>\n";
 		html+="<tr>";
 		html+="<th>学号</th>";
 		html+="<th>姓名</th>";

@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/servlet")
+@WebServlet("/com/entity/servlet")
 public class servlet extends HttpServlet {
     public servlet(){
         super();

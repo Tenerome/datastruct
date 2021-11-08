@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-<form action="servlet" method="post">
+<form action="/com/enity/servlet" method="post">
     姓名:<input type="text" name="name">
     学号:<input type="text" name="sno">
     <input type="submit" name="submit" value="提交">
