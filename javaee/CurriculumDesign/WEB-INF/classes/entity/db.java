@@ -1,4 +1,3 @@
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -177,7 +176,7 @@ public class db {
 			html+="<td>"+students.get(i).getSsex()+"</td>";
 			html+="<td>"+students.get(i).getSmajor()+"</td>";
 			html+="<td>"+students.get(i).getSgrade()+"</td>";
-			html+="<td><a href='main.jsp?operate=upedit.jsp&id="+students.get(i).getSno()+"'>修改</a>&nbsp;&nbsp;<a href='Delete?id="+students.get(i).getId()+"'>删除</a></td>";
+			html+="<td><a href='main.jsp?operate=upedit.jsp&id="+students.get(i).getSno()+"'>修改</a>&nbsp;&nbsp;<a href='Delete?id="+students.get(i).getSno()+"'>删除</a></td>";
 			html+="</tr>\n";
 		}
 		html+="</table>\n";
@@ -192,11 +191,11 @@ public class db {
 		return html;
 	}
 	// for test
-	public static void main(String[] args) {
-		db.getConnection();
-		//student stud=new student("201215155","库巴","女","食品工程","99");
-		db.delete("201215155");
-		//System.out.print(db.getStudents().get(1).getSno());//arraylist 的get的方法:E get(int location),返回第location个对象，从0开始
+	// public static void main(String[] args) {
+	// 	db.getConnection();
+	// 	//student stud=new student("201215155","库巴","女","食品工程","99");
+	// 	db.delete("201215155");
+	// 	//System.out.print(db.getStudents().get(1).getSno());//arraylist 的get的方法:E get(int location),返回第location个对象，从0开始
 
-	}
+	// }
 }

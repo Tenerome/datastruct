@@ -1,5 +1,3 @@
-
-import javax.print.FlavorException;
 import javax.servlet.http.HttpServletRequest;
 
 public class student {
@@ -73,11 +71,11 @@ public class student {
         this.sgrade = sgrade;
     }
 
-    // test
-    public static void main(String[] args) {
-        student s1 = new student();
-        s1.setSgrade("100");
+    // // test
+    // public static void main(String[] args) {
+    //     student s1 = new student();
+    //     s1.setSgrade("100");
 
-    }
+    // }
 
 }
