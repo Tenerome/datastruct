@@ -1,6 +1,4 @@
-package servlets;
-import entity.db;
-import entity.student;
+package entity;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/test")
 
- class test extends HttpServlet {
+public class test extends HttpServlet {
     public test(){
         super();
     }

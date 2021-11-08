@@ -1,3 +1,4 @@
+package entity;
 import javax.servlet.http.HttpServletRequest;
 
 public class student {

@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="test" method="post">
+<form action="/test" method="post">
     
 </form>
 </body>

@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <%!//获取客户端的IP
-        public String getRemoteIP(HttpServletRequest request) { 
-            if (request.getHeader("x-forwarded-for") == null) { 
-                return request.getRemoteAddr(); 
-            } 
-            return request.getHeader("x-forwarded-for"); 
-        }%> 
-        <%　　String ip = getRemoteIP(request);
-            URL url = new URL("http://ip.taobao.com/service/getIpInfo.php?ip=" + ip);//使用的IP库是淘宝IP库
-            HttpURLConnection urlConn = (HttpURLConnection)url.openConnection();
-        
-            InputStream res = urlConn.getInputStream();
-            Scanner scanner = new Scanner(res);
-            String urlContent = "";
-            while (scanner.hasNextLine()) {
-                urlContent += (String)scanner.nextLine();
-            }
-            
-            System.out.println(urlContent);%>
-    </body>
+<%@ page language="java" contentType="text/html;chatset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
 
+</title>
+<style>
+
+</style>
+</head>
+<body>
+<form action="servlet" method="post">
+    姓名:<input type="text" name="name">
+    学号:<input type="text" name="sno">
+    <input type="submit" name="submit" value="提交">
+</form>
+<%
+
+%>
+</body>
 </html>

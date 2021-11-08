@@ -1,7 +1,7 @@
-package entity;
+package entity.student;
 import javax.servlet.http.HttpServletRequest;
 
- public class student {
+public class student {
     private String sno, sname, ssex, smajor, sgrade;
 
     public student(String sno, String sname, String ssex, String smajor, String sgrade) { // ok
@@ -72,10 +72,11 @@ import javax.servlet.http.HttpServletRequest;
         this.sgrade = sgrade;
     }
 
-    // test
-    public static void main(String[] args) {
-        
-        System.out.println("success");
-    }
+    // // test
+    // public static void main(String[] args) {
+    //     student s1 = new student();
+    //     s1.setSgrade("100");
+
+    // }
 
 }

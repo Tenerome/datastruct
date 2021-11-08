@@ -1,3 +1,5 @@
+package entity;
+import entity.student.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
