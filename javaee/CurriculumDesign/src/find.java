@@ -1,5 +1,6 @@
-//package servlets;
-//import entity.*;
+package servlets;
+import entity.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

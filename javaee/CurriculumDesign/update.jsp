@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="student" %>
-<%@ page import="db" %>
+<%@ page import="entity.student" %>
+<%@ page import="entity.db" %>
 <%
 String id=request.getParameter("id")==null?"":request.getParameter("id");
 student stu = db.getStudentByID(id);

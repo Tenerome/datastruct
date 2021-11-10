@@ -1,6 +1,6 @@
+package	servlets;
+import entity.*;
 
-//package	servlets;
-//import entity.*;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -1,6 +1,6 @@
 
-//package servlets;
-//import entity.*;
+package servlets;
+import entity.*;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

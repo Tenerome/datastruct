@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="major" %>
+<%@ page import="servlets.major" %>
 <% major major=new major(); %>
 <div id="enter">
 	<form id='' name='enterstudent' action="add" method="post">
