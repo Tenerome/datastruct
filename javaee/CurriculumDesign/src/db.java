@@ -180,7 +180,7 @@ public class db {
 			html+="<td>"+students.get(i).getSsex()+"</td>";
 			html+="<td>"+students.get(i).getSmajor()+"</td>";
 			html+="<td>"+students.get(i).getSgrade()+"</td>";
-			html+="<td><a href='index.jsp?operate=upedit.jsp&id="+students.get(i).getId()+"'>修改</a>&nbsp;&nbsp;<a href='delete.jsp?id="+students.get(i).getId()+"'>删除</a></td>";
+			html+="<td><a href='index.jsp?operate=update.jsp&id="+students.get(i).getId()+"'>修改</a>&nbsp;&nbsp;<a href='delete?id="+students.get(i).getId()+"'>删除</a></td>";
 			html+="</tr>\n";
 		}
 		html+="</table>\n";
@@ -194,10 +194,31 @@ public class db {
 		
 		return html;
 	}
+	public static student getStudentByID(String id) {		//test-ok
+		Connection conn = getConnection();
+		student stu = new student();
+		ResultSet rs = null;
+		if(conn==null) 
+			return stu;
+		PreparedStatement stmt=null;
+		String sql = "select * from student where id=?";
+		try {
+			stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, Integer.parseInt(id));
+			rs = stmt.executeQuery();
+			if(rs.next())
+				stu = new student(rs.getString("id"),rs.getString("sno"),rs.getString("sname"),
+					rs.getString("ssex"),rs.getString("smajor"),rs.getString("sgrade"));			
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return stu;
+	}
 	// for test
 	// public static void main(String[] args) {
 	// 	db.getConnection();
-	// 	student stud=new student();
-	// 	System.out.println(db.getStudents(stud).get(0).getId());
+	// 	String id="2";
+	// 	System.out.println(db.getStudentByID(id).getSmajor());
 	//  }
 }

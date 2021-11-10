@@ -20,7 +20,7 @@ public class student {
 
     public student(HttpServletRequest request) {// to do test
         super();
-        this.id="";
+        this.id=request.getParameter("id") == null ? "" : request.getParameter("id");
         this.sno = request.getParameter("sno") == null ? "" : request.getParameter("sno");
         this.sname = request.getParameter("sname") == null ? "" : request.getParameter("sname");
         this.ssex = request.getParameter("ssex") == null ? "" : request.getParameter("ssex");

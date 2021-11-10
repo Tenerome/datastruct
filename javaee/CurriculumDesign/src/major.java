@@ -54,6 +54,36 @@ public class major {
 		return majors;
 	}
 
+    public static String getMajorforSelect() {
+    	String html="";
+    	List<major> majors = getMajors();
+    	for(int i=0;i<majors.size();i++) {
+    		html+="<option value="+majors.get(i).getId()+">"+majors.get(i).getMname()+"</option>";
+    	}
+    	
+    	return html;		
+	}
+    
+    public boolean add() {
+    	boolean state = false;
+		Connection conn = db.getConnection();
+		if(conn==null) 
+			return state;
+		PreparedStatement stmt=null;
+		String sql = "insert into major(mname,college) values(?,?)";
+		try {
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, this.getMname());
+			stmt.setString(2, this.getCollege());			
+			stmt.executeUpdate();
+			state = true;
+			stmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}			
+		return state;
+    }
 
     public String getId() {
         return id;

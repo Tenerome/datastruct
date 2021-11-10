@@ -2,7 +2,7 @@
 #top {
 	width: 920px;
 	margin: 0 auto;
-	background-color: #0080c0;
+	background-color: #8ed7cf;
 	border: 0;
 	color:#ffffff;
 	text-align: center;	
@@ -19,7 +19,7 @@
 {
 	width: 920px;
 	margin: 0 auto;
-	background-color: #0080c0;
+	background-color: #8ed7cf;
 	border: 0;
 	color:white;
 	text-align: center;	
@@ -101,7 +101,7 @@ a:hover {background-color:#804000}
 }
 
 #enter div{
-	border-bottom:1px dotted #6699FF;
+	border-bottom:1px dotted #8ed7cf;
 	margin:10px auto;
 	padding:0;
 	

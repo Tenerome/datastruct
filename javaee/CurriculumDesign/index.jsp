@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div id="top"><h1 class="header">学生信息管理系统</h1></div>
+    <div id="top"><h1 class="header">选修课管理系统</h1></div>
     <div id="main">
         <div id="leftMenu">
              <ul>
@@ -24,7 +24,7 @@
            
         </div>
     </div>
-    <div id="footer">版权所有:&nbsp;&nbsp;哈尔滨商业大学&nbsp;&nbsp;计算机与信息工程学院&nbsp;&nbsp;</div>
+    <div id="footer">©2021 Tenerome:&nbsp;&nbsp;help&nbsp;&nbsp;feekback&nbsp;&nbsp;</div>
 
 </body>
 </html>
