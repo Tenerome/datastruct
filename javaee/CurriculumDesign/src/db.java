@@ -1,4 +1,4 @@
-
+//package entity;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -65,8 +65,8 @@ public class db {
 		try {
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);
-			while (rs.next()) {
-				students.add(new student(rs.getString("sno"), rs.getString("sname"),
+			while (rs.next()) {				//这里获取数据库的int型id，可以直接getString也可以getInt后用String.valueOf()转换
+				students.add(new student(rs.getString("id"),rs.getString("sno"), rs.getString("sname"),
 						rs.getString("ssex"),rs.getString("smajor"), rs.getString("sgrade")));//arraylist的add(E object),调用student的构造方法
 						                                                                      
 			}
@@ -98,7 +98,7 @@ public class db {
 		String sql = "insert into student(sno,sname,ssex,smajor,sgrade) values(?,?,?,?,?)";
 		try {
 			stmt = conn.prepareStatement(sql);
-			stmt.setInt(1, Integer.parseInt(stu.getSno()));
+			stmt.setString(1, stu.getSno());
 			stmt.setString(2, stu.getSname());
 			stmt.setString(3, stu.getSsex());
 			stmt.setString(4, stu.getSmajor());
@@ -119,14 +119,15 @@ public class db {
 		if(conn==null) 
 			return state;
 		PreparedStatement stmt=null;
-		String sql = "update student set sname=?,ssex=?,smajor=?,sgrade=? where sno=?";
+		String sql = "update student set sno=?, sname=?,ssex=?,smajor=?,sgrade=? where id=?";
 		try {
 			stmt = conn.prepareStatement(sql);
-			stmt.setString(1, stu.getSname());
-			stmt.setString(2, stu.getSsex());
-			stmt.setString(3, stu.getSmajor());
-			stmt.setString(4, stu.getSgrade());
-			stmt.setInt(5, Integer.parseInt(stu.getSno()));
+			stmt.setString(1, stu.getSno());
+			stmt.setString(2, stu.getSname());
+			stmt.setString(3, stu.getSsex());
+			stmt.setString(4, stu.getSmajor());
+			stmt.setString(5, stu.getSgrade());
+			stmt.setInt(6, Integer.parseInt(stu.getId()));
 			stmt.executeUpdate();
 			state = true;
 			stmt.close();
@@ -137,16 +138,16 @@ public class db {
 		return state;
 	}
 	
-	public static boolean delete(String sno) {//删除
+	public static boolean delete(String id) {//删除
 		boolean state = false;
 		Connection conn = getConnection();
 		if(conn==null) 
 			return state;
 		PreparedStatement stmt=null;
-		String sql = "delete from student where sno=?";
+		String sql = "delete from student where id=?";
 		try {
 			stmt = conn.prepareStatement(sql);
-			stmt.setInt(1, Integer.parseInt(sno));			
+			stmt.setInt(1, Integer.parseInt(id));			
 			stmt.executeUpdate();
 			state = true;
 			stmt.close();
@@ -162,22 +163,24 @@ public class db {
 		html+="<div>\n";
 		html+="<table align='center' border='2'>\n";
 		html+="<tr>";
+		html+="<th>序号</th>";
 		html+="<th>学号</th>";
 		html+="<th>姓名</th>";
 		html+="<th>性别</th>";
 		html+="<th>专业</th>";
-		html+="<th>年级</th>";
 		html+="<th>成绩</th>";
+		html+="<th>操作</th>";
 		html+="<th></th>";
 		html+="</tr>\n";
 		for(int i=0;i<students.size();i++) {
 			html+="<tr>";
+			html+="<td>"+students.get(i).getId()+"</td>";
 			html+="<td>"+students.get(i).getSno()+"</td>";
 			html+="<td>"+students.get(i).getSname()+"</td>";
 			html+="<td>"+students.get(i).getSsex()+"</td>";
 			html+="<td>"+students.get(i).getSmajor()+"</td>";
 			html+="<td>"+students.get(i).getSgrade()+"</td>";
-			html+="<td><a href='main.jsp?operate=upedit.jsp&id="+students.get(i).getSno()+"'>修改</a>&nbsp;&nbsp;<a href='Delete?id="+students.get(i).getSno()+"'>删除</a></td>";
+			html+="<td><a href='index.jsp?operate=upedit.jsp&id="+students.get(i).getId()+"'>修改</a>&nbsp;&nbsp;<a href='delete.jsp?id="+students.get(i).getId()+"'>删除</a></td>";
 			html+="</tr>\n";
 		}
 		html+="</table>\n";
@@ -194,9 +197,7 @@ public class db {
 	// for test
 	// public static void main(String[] args) {
 	// 	db.getConnection();
-	// 	//student stud=new student("201215155","库巴","女","食品工程","99");
-	// 	db.delete("201215155");
-	// 	//System.out.print(db.getStudents().get(1).getSno());//arraylist 的get的方法:E get(int location),返回第location个对象，从0开始
-
-	// }
+	// 	student stud=new student();
+	// 	System.out.println(db.getStudents(stud).get(0).getId());
+	//  }
 }

@@ -1,3 +1,4 @@
+//package entity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,15 +13,34 @@ public class user {
         this.password=password;
     }
     public user(){
-        return user("","");
+        this("","");
     }
     public user(HttpServletRequest request) {	
+        super();
 		this.username = request.getParameter("username")==null?"":request.getParameter("username");
 		this.password = request.getParameter("password")==null?"":request.getParameter("password");
 	}
 
-    public boolean check(){
-        
+    public boolean check(){//验证  ok
+        boolean state = false;
+		Connection conn = db.getConnection();
+		ResultSet rs = null;
+		if(conn==null) 
+			return state;
+		PreparedStatement stmt=null;
+	    String sql = "select * from user where username=? and password=?";
+	    try {
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, this.getUsername());
+			stmt.setString(2, this.getPassword());
+			rs = stmt.executeQuery();
+			if(rs.next())
+                state=true;	
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	    return state;
     }
 
     public String getUsername() {
@@ -38,5 +58,11 @@ public class user {
     public void setPassword(String password) {
         this.password = password;
     }
+//for test
+// public static void main(String[] args) {
+//         user uu=new user("guest","123456");
+//         if(uu.check())
+//             System.out.println("success");
+// }
 
 }

@@ -1,4 +1,5 @@
-
+//package servlets;
+//import entity.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -8,10 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/test")
+@WebServlet("/find")
 
-public class test extends HttpServlet {
-    public test(){
+public class find extends HttpServlet {
+    public find(){
         super();
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,9 +23,10 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         db.getConnection();
-        student stud=new student();
-        PrintWriter out=response.getWriter();
-        out.println(db.getStuHTML(stud, 0,0));
+        String info=db.getStuHTML(new student(request),0,0);
+        request.setAttribute("info", info);
+		String url="index.jsp?operate=output.jsp";
+		request.getRequestDispatcher(url).forward(request, response);
 
 }
 }

@@ -1,13 +1,30 @@
-<%@  page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>选修课管理系统</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
-<form action="/test" method="post">
-    
-</form>
+
+    <div id="top"><h1 class="header">学生信息管理系统</h1></div>
+    <div id="main">
+        <div id="leftMenu">
+             <ul>
+                 <li><a href="index.jsp?operate=welcome.jsp">主页</a></li>
+                 <li><a href="index.jsp?operate=find.jsp">查询</a></li>
+                 <li><a href="index.jsp?operate=add.jsp">添加</a></li>
+                 <li><a href="index.jsp?operate=addMajor.jsp">专业维护</a></li>
+                 <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        <div id="content">        
+        <jsp:include page='<%=request.getParameter("operate")==null?"welcome.jsp":request.getParameter("operate")%>'/>                
+        
+           
+        </div>
+    </div>
+    <div id="footer">版权所有:&nbsp;&nbsp;哈尔滨商业大学&nbsp;&nbsp;计算机与信息工程学院&nbsp;&nbsp;</div>
+
 </body>
 </html>
