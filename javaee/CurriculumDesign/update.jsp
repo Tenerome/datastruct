@@ -8,7 +8,7 @@ student stu = db.getStudentByID(id);
 
 
 <div id="enter">
-	<form id='' name='enterstudent' action="Update" method="post">
+	<form id='' name='enterstudent' action="update" method="post">
 	        <input type="hidden" name="id" value=<%=stu.getId() %>>
 		<div>
 			<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</label>

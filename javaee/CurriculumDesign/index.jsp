@@ -6,6 +6,13 @@
 <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
 <body>
+    <%
+    String isOK=(String)session.getAttribute("isOK");
+    if(isOK==null)
+        isOK="";
+    if(!isOK.equals("true"))
+        response.sendRedirect("login.jsp");
+    %>
 
     <div id="top"><h1 class="header">选修课管理系统</h1></div>
     <div id="main">
@@ -14,7 +21,7 @@
                  <li><a href="index.jsp?operate=welcome.jsp">主页</a></li>
                  <li><a href="index.jsp?operate=find.jsp">查询</a></li>
                  <li><a href="index.jsp?operate=add.jsp">添加</a></li>
-                 <li><a href="index.jsp?operate=addMajor.jsp">专业维护</a></li>
+                 <li><a href="index.jsp?operate=addmajor.jsp">专业维护</a></li>
                  <li><a href="#">退出</a></li>
             </ul>
         </div>

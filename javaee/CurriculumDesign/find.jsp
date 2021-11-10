@@ -5,12 +5,12 @@
 		<div>
 			<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
 			<input type="text" id="no" name="no">
-			<span class="spants">请输入学生学号</span>
+			<span class="spants"></span>
 		</div>
 		<div>
 			<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
 			<input type="text" id="name" name="name">
-			<span class="spants">请输入学生姓名</span>
+			<span class="spants"></span>
 		</div>
 		<div>
 			<label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
@@ -22,17 +22,17 @@
 		<div>
 			<label>出生日期：</label>
 			<input type="text" id="birthday" name="birthday">
-			<span class="spants">请输入学生出生日期</span>
+			<span class="spants"></span>
 		</div>
 		<div>
 			<label>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</label>
 			<input type="text" id="major" name="major"/>			    
-			<span class="spants">请输入学生所学专业</span>
+			<span class="spants"></span>
 		</div>
 		<div>
 			<label>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：</label>
 			<input type="text" id="grade" name="grade" maxlength="4">	
-			<span class="spants">请输入学生年级</span>		
+			<span class="spants"></span>		
 		</div>
 		<div>
 			<label>籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：</label>

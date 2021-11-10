@@ -1,5 +1,4 @@
-package servlets;
-import entity.*;
+package entity;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
