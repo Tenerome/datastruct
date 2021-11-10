@@ -20,11 +20,10 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
         HttpSession session = request.getSession();
         String url="";
 		if(new user(request).check()) {
-			request.getSession().setAttribute("login", "success");
 			url="index.jsp";
-            session.setAttribute("isOK","true");
+            session.setAttribute("login","true");
 		}else {
-            session.setAttribute("alert", "账号或密码错误");
+            session.setAttribute("login","false");
 			url="login.jsp";
 		}	
 		

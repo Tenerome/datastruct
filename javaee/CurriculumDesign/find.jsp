@@ -39,8 +39,8 @@
 			<input type="text" id="origin" name="origin" />				
 		</div>		
 		<div class="addbt" style="border:0;">
-			<input type="submit" value="查询" style="width:65px;"/>
-			<input type="reset" value="取消" style="width:65px;"/>
+			<input type="submit" value="查询" style="width:40px;"/>
+			<input type="reset" value="取消" style="width:40px;"/>
 		</div>
 	</form>
 </div>

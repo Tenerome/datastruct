@@ -1,29 +1,47 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%
-	String ale=(String)session.getAttribute("alert");
+	String login=(String)session.getAttribute("login");
 %>
-<script>
-	function pop() {
-		if(ale!=null)
-			alert(ale);
-	}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css"href="./css/index.css"/>
+		<link rel="stylesheet" type="text/css"href="./css/iconfont.css"/>
+		<style>
+		body{
+			height: 100%;
+			width: 100%;
+            background: url('pic/bg1.jpg');
+            background-size:cover;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="login-box">
+			<h1>Login</h1>
+			<form id='login' name='login' action="login" method="post">
+			<div class="input-box">
+				<i class="iconfont">&#xe609;</i>
+				
+				<input type="text" placeholder="UserName" name="username"/>
+			</div>
+			<div class="input-box">
+				<i class="iconfont">&#xe605;</i>
+				<input type="password" placeholder="UserPassword" name="password" />
+			</div>
+			<button>登录</button>
+			</form>
+		</div>
+		
+	</body>
+<script type = "text/javascript">
+        window.onload = function()
+        {
+            var ss="<%=login %>";
+			if(ss=="false")
+				alert("账号或密码错误");
+        }
 </script>
-<div id="enter">
-	<form id='login' name='login' action="login" method="post">
-		<div>
-			<label>用户名：</label>
-			<input type="text" id="username" name="username">
-			<span class="spants">请输入用户名</span>
-		</div>
-		<div>
-			<label>密码：</label>
-			<input type="password" id="password" name="password">
-			<span class="spants">请输入密码</span>
-		</div>
-			
-		<div class="addbt" style="border:0;">
-			<input type="submit" value="登录" onclick="pop()" style="width:65px;"/>
-			<input type="reset" value="取消" style="width:65px;"/>
-		</div>
-	</form>
-</div>
+</html>
+

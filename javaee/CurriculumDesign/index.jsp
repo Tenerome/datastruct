@@ -7,11 +7,13 @@
 </head>
 <body>
     <%
-    String isOK=(String)session.getAttribute("isOK");
-    if(isOK==null)
-        isOK="";
-    if(!isOK.equals("true"))
+    String login=(String)session.getAttribute("login");
+    if(login==null)//第一次打开
+        login="";
+    if(!login.equals("true"))//排斥login为""和flase
         response.sendRedirect("login.jsp");
+    if(login.equals("true"))//成功登录之后清除session
+        session.invalidate(); 
     %>
 
     <div id="top"><h1 class="header">选修课管理系统</h1></div>
