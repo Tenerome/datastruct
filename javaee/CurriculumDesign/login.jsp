@@ -8,14 +8,6 @@
 		<title>登录</title>
 		<link rel="stylesheet" type="text/css"href="./css/index.css"/>
 		<link rel="stylesheet" type="text/css"href="./css/iconfont.css"/>
-		<style>
-		body{
-			height: 100%;
-			width: 100%;
-            background: url('pic/bg1.jpg');
-            background-size:cover;
-		}
-		</style>
 	</head>
 	<body>
 		<div id="login-box">
@@ -32,6 +24,9 @@
 			</div>
 			<button>登录</button>
 			</form>
+		</div>
+		<div id="foot">  <%-- foot--%>
+			2021©Tenerome&nbsp;&nbsp;&nbsp;Email:ch.heng@QQ
 		</div>
 		
 	</body>

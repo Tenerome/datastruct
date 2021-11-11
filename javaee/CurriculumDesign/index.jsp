@@ -12,8 +12,6 @@
         login="";
     if(!login.equals("true"))//排斥login为""和flase
         response.sendRedirect("login.jsp");
-    if(login.equals("true"))//成功登录之后清除session
-        session.invalidate(); 
     %>
 
     <div id="top"><h1 class="header">选修课管理系统</h1></div>
@@ -24,7 +22,7 @@
                  <li><a href="index.jsp?operate=find.jsp">查询</a></li>
                  <li><a href="index.jsp?operate=add.jsp">添加</a></li>
                  <li><a href="index.jsp?operate=addmajor.jsp">专业维护</a></li>
-                 <li><a href="#">退出</a></li>
+                 <li><a href="exit.jsp">退出</a></li>
             </ul>
         </div>
         <div id="content">        

@@ -1,5 +1,5 @@
 body{
-	background-image: url(../img/桥.jpg);
+	background-image: url(../pic/bg1.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
 	background-position: 0px -50px;
@@ -44,9 +44,18 @@ body{
 }
 
 #login-box button:hover{
-	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	background-image: linear-gradient(to top, #b8d030 0%, #d8563f 100%);
 }
 #login-box .input-box i{
 	color: #FFFFFF;
 }
 
+#foot{
+	color: #bebbbbc9;
+	font-size: 10px;
+	margin-top: 218px;
+	margin-bottom:2px;
+	width: 20px;
+	margin-left: 40%;
+	margin-right: 30%;
+}
