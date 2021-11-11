@@ -1,39 +1,25 @@
 @charset "UTF-8";
 body{
-	background-image: linear-gradient(120deg, #d1fea6 0%, #80f6ec 100%);
+	background-color: #9ca5a7;
+	background-repeat: no-repeat;
 }
 #top {
-	width: 920px;
+	width: 100%;
 	margin: 0 auto;
-	background-color: #8ed7cf;
+	background-color: #3a3737;
 	border: 0;
 	color:#ffffff;
-	text-align: center;	
-	height:80px;
+	text-align: left;	
+	height:60px;
 	line-height: 80px;	
 }
-#main {
-	width: 920px;
-	height:525px;
-	margin: 0 auto;
-	background-color: #fff;	
-}
-#footer
-{
-	width: 920px;
-	margin: 0 auto;
-	background-color: #8ed7cf;
-	border: 0;
-	color:white;
-	text-align: center;	
-	height:60px;
-	line-height: 60px;	  
-}
+
 #leftMenu {
-	width: 150px;
-	height:520px;
+	width: 200px;
+	height:100%;
 	float: left;
 	border-right: 2px solid rgb(221, 221, 221);
+	background-color: #3a3737;
 }
 #content {
 	width: 766px;;
