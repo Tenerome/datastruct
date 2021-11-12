@@ -1,35 +1,39 @@
 @charset "UTF-8";
 body{
-	background-color: #9ca5a7;
+	background-color: #3a3737;
 	background-repeat: no-repeat;
 }
 #top {
+	position: absolute;
+	left: 0%;
+	top: 0%;
 	width: 100%;
-	margin: 0 auto;
+	height: 10;
 	background-color: #3a3737;
 	border: 0;
 	color:#ffffff;
 	text-align: left;	
-	height:60px;
-	line-height: 80px;	
 }
 
 #leftMenu {
-	width: 200px;
-	height:100%;
-	float: left;
+	position: absolute;
+	left: 0%;
+	top: 10%;
+	width: 12%;
+	height: 90%;
 	border-right: 2px solid rgb(221, 221, 221);
 	background-color: #3a3737;
 }
 #content {
-	width: 766px;;
-	float: left;
-	height: 514px;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 88%;
+	height: 90%;
 	display: block;
-	padding: 10 0 0 0;;
+	padding: 0 0 0 0;;
 	line-height: 30px;
 	border: 0;
-	margin:0 auto;
 	background: #ffffff;
 	text-align: center;	
 	
@@ -51,9 +55,14 @@ li
 {
 float:left;
 }
-
+#leftMenu h3{
+	font-size: medium;
+	color: #a9aaaa;
+	margin-top: 10px;
+	margin-left: 35px;
+}
 #leftMenu ul {
-	margin: 35px 10px;
+	margin: 10px 10px;
 }
 
 #leftMenu ul li {
@@ -62,10 +71,13 @@ float:left;
 	display: block;
 	cursor: pointer;
 	line-height: 30px;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 10px;
 	margin-left: 30px;
-	border-bottom: 1px dotted #c0c0c0;
+}
+#leftMenu ul li img{
+	width: 16px;
+	height: 16px;
 }
 
 #leftMenu ul li a {
@@ -73,7 +85,6 @@ float:left;
 	text-decoration: none;
     color: #8B8E93;
     display: block;
-    border-bottom: 1px solid #F0F0F0;
 	text-decoration: none;
 }
 #leftMenu ul li a:hover{
