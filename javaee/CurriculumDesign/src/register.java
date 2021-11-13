@@ -5,9 +5,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/addmajor")
-public class addmajor extends HttpServlet {
-    public addmajor(){
+@WebServlet("/register")
+public class register extends HttpServlet {
+    public register(){
         super();
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -17,14 +17,16 @@ public class addmajor extends HttpServlet {
 public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-        String info="";
-		if(new major(request).add()) {
-			info="添加成功";
+        String register="";
+        String url="";
+		if(new user(request).register()) {
+			url+="login.jsp";
 		}else {
-			info="添加失败";
+            url+="register.jsp";
+			register+="false";
 		}
-		request.setAttribute("info", info);
-		String url="index.jsp?operate=output.jsp";
+		request.setAttribute("register", register);
+		
 		request.getRequestDispatcher(url).forward(request, response);
 }
 }

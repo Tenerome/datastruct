@@ -1,6 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="entity.major" %>
 <% major major=new major(); %>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<title>
+添加
+</title>
+<div class="frame">
+	<br><br>
+	<br><br>
 <div id="enter">
 	<form id='' name='enterstudent' action="add" method="post">
 		<div>
@@ -39,4 +47,5 @@
 			<input type="reset" value="取消" style="width:65px;"/>
 		</div>
 	</form>
+</div>
 </div>

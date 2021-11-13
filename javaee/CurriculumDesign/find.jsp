@@ -9,7 +9,9 @@
 </title>
 </head>
 <body>
-
+<div class="frame">
+	<br><br>
+	<br><br>
 <div id="enter">
 	<form id='' name='enterstudent' action="find" method="post">
 		<div>
@@ -44,6 +46,7 @@
 			<input type="reset" value="取消" style="width:40px;"/>
 		</div>
 	</form>
+</div>
 </div>
 </body>
 </html>

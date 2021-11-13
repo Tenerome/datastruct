@@ -13,7 +13,7 @@
     if(!login.equals("true"))//排斥login为""和flase
         response.sendRedirect("login.jsp");
     %>
-    <div id="top"><h1 class="header">选修课管理系统</h1></div>
+    <div id="top"><h1 class="header">ECMS</h1></div>
     <div>
     <div id="leftMenu">
         <h3>MENU</h3>
@@ -34,8 +34,7 @@
         <br><br><br><br><br><br><br>
         <p style="color:#808080;font-size:7px;">&nbsp;Copyright&nbsp;©Tenerome</p>
     </div>
-    <div id="content"> 
-        <br><br><br><br>   
+    <div id="content">   
         <jsp:include page='<%=request.getParameter("operate")==null?"welcome.jsp":request.getParameter("operate")%>'/>                
     </div>
     </div>

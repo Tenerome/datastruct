@@ -5,8 +5,14 @@
 String id=request.getParameter("id")==null?"":request.getParameter("id");
 student stu = db.getStudentByID(id);
 %>
-
-
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<title>
+修改
+</title>
+<div class="frame">
+	<br><br>
+	<br><br>
 <div id="enter">
 	<form id='' name='enterstudent' action="update" method="post">
 	        <input type="hidden" name="id" value=<%=stu.getId() %>>
@@ -43,4 +49,5 @@ student stu = db.getStudentByID(id);
 		</div>
 		
 	</form>
+</div>
 </div>

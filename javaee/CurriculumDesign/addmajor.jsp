@@ -1,4 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<title>
+专业维护
+</title>
+<div class="frame">
+	<br><br>
+	<br><br>
 <div id="enter">
 	<form id='' name='entermajor' action="addmajor" method="post">
 		<div>
@@ -17,4 +25,5 @@
 			<input type="reset" value="取消" style="width:65px;"/>
 		</div>
 	</form>
+</div>
 </div>

@@ -18,6 +18,11 @@ body{
 	padding-top: 60px;
 	color: #ffffff;
 }
+#login-box a{
+	color:#b4ccdaee;
+	font-size: 5px;
+	text-decoration: none;
+}
 
 #login-box .input-box{
 	margin-top: 30px;

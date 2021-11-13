@@ -23,6 +23,9 @@
 				<input type="password" placeholder="UserPassword" name="password" />
 			</div>
 			<button>登录</button>
+			<br>
+			<br>
+			<a href="register.jsp">还没有账号?</a>
 			</form>
 		</div>
 		<div id="foot">  <%-- foot--%>
