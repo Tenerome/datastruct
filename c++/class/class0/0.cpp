@@ -20,4 +20,7 @@ int main(){
     printf("%d%f",z,n);
     //cout<<z<<endl<<n<<endl;
     return 0;
+    ;
+    ;
+    ;
 }

@@ -9,17 +9,18 @@
 </head>
 <body>
 <div class="pane"> 
-    <form action="register" method="post" name="form">
+    <form action="register" method="post" name="form" id="form">
         账号:<input type="text" name="username" value="" id="username"><br>
         密码:<input type="password" name="password" value="" id="password">
-        <input type="button"  name="submit" value="注册" onclick="checknull()">
     </form>
+    <button type="button" id="regist">注册</button>
 </div>
 </body>
 <% 
 String register=(String)request.getAttribute("register");
 %>
 <script>
+
     window.onload=function(){
         var regi="<%=register %>";
          if(regi=="false")
@@ -29,19 +30,17 @@ String register=(String)request.getAttribute("register");
     function checknull() {
       var name =document.form.username;
       var pass=document.form.password;
-     
+      var subm=document.getElementById('form');
       if(name.value.length==0){
           alert("请输入账号");
-          location.reload();
       }else if(pass.value.length==0){
         alert("请输入密码");
-        location.reload();    
         }else{
-             form.submit.focus();
-             form.submit.click();
+            subm.submit();
         }
    
     }
+    
   
 </script>
 </html>
