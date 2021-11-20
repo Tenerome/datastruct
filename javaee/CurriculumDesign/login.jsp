@@ -6,6 +6,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>登录</title>
+		<link rel="shortcut icon" href="./pic/icon/door.ico">
 		<link rel="stylesheet" type="text/css"href="./css/index.css"/>
 		<link rel="stylesheet" type="text/css"href="./css/iconfont.css"/>
 	</head>
@@ -22,7 +23,7 @@
 				<i class="iconfont">&#xe605;</i>
 				<input type="password" placeholder="UserPassword" name="password" />
 			</div>
-			<button>登录</button>
+			<button type="button" onclick="checknull()">登录</button>
 			<br>
 			<br>
 			<a href="register.jsp">还没有账号?</a>
@@ -40,6 +41,19 @@
 			if(ss=="false")
 				alert("账号或密码错误");
         }
+		function checknull() {
+      var name =document.login.username;
+      var pass=document.login.password;
+      var subm=document.getElementById('login');
+      if(name.value.length==0){
+          alert("请输入账号");
+      }else if(pass.value.length==0){
+        alert("请输入密码");
+        }else{
+            subm.submit();
+        }
+   
+    }
 </script>
 </html>
 

@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>选修课管理系统</title>
+<link rel="shortcut icon" href="./pic/icon/book.ico">
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" href="css/table.css" />
 </head>
@@ -26,15 +27,15 @@
         </ul>
         <h3>FAVOURITE</h3>
         <ul>
-            <li><a href="https://gitee.com/tenerome/code/tree/br1/javaee/CurriculumDesign"><img src="pic/icon/code.png">&nbsp;Code</a></li>
-            <li><a href="https://gitee.com/tenerome"><img src="pic/icon/follow.png">&nbsp;Fork me</a></li>
-            <li><a href="mailto:ch.heng@qq.com"><img src="pic/icon/email.png">&nbsp;ch.heng</a></li>
+            <li><a href="https://gitee.com/tenerome/code/tree/br1/javaee/CurriculumDesign" target="blank"><img src="pic/icon/code.png">&nbsp;Code</a></li>
+            <li><a href="https://gitee.com/tenerome"  target="blank"><img src="pic/icon/follow.png">&nbsp;Fork me</a></li>
+            <li><a href="mailto:ch.heng@qq.com" target="blank"><img src="pic/icon/email.png">&nbsp;ch.heng</a></li>
         </ul>
         <br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br>
         <p style="color:#808080;font-size:7px;">&nbsp;Copyright&nbsp;©Tenerome</p>
     </div>
-    <div id="content">   
+    <div id="content">  
         <jsp:include page='<%=request.getParameter("operate")==null?"welcome.jsp":request.getParameter("operate")%>'/>                
     </div>
     </div>

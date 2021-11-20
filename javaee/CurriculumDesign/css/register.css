@@ -1,5 +1,5 @@
 body{
-	background-image: url(../pic/bg4.jpg);
+	background-image: url(../pic/bg2.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
 	background-position: 0px -50px;
@@ -44,12 +44,12 @@ body{
 	border-radius:13px ;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+	background-image: linear-gradient(120deg, #a6c0fe 0%, #477e4b 100%);
 	color: #FFFFFF;
 }
 
 #login-box button:hover{
-	background-image: linear-gradient(to top, #d05030 0%, #c0cdf8 100%);
+	background-image: linear-gradient(to top, #5c914c 0%, #7fd7dd 100%);
 }
 #login-box .input-box i{
 	color: #FFFFFF;
