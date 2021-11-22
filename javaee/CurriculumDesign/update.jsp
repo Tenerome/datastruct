@@ -7,14 +7,18 @@ student stu = db.getStudentByID(id);
 %>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
+<script src="./js/content.js"></script>
+<script src="./js/particles.js" ></script>
 <title>
 修改
 </title>
+<div id="particles-js">
+<canvas class="particles-js-canvas-el"></canvas>
 <div class="frame">
 	<br><br>
 	<br><br>
 <div id="enter">
-	<form id='' name='enterstudent' action="update" method="post">
+	<form  name='enterstudent' action="update" method="post">
 	        <input type="hidden" name="id" value=<%=stu.getId() %>>
 		<div>
 			<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</label>
@@ -44,10 +48,11 @@ student stu = db.getStudentByID(id);
 			<span class="spants">请输入学生年级</span>		
 		</div>	
 		<div class="addbt" style="border:0;">
-			<input type="submit" value="修改" style="width:65px;"/>
-			<input type="reset" value="取消" style="width:65px;"/>
+			<input type="submit" value="修改" />
+			<input type="reset" value="取消" />
 		</div>
 		
 	</form>
 </div>
 </div>
+</div> 
