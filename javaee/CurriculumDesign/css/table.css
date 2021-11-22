@@ -1,63 +1,34 @@
 table{
-    font-family: verdana,arial,sans-serif;
-    font-size:11px;
-    color:#333333;
-    border-width: 1px;
-    border-color: #666666;
-    border-collapse: collapse;
-    width:98%;
-    margin:0 auto;
-    
+    /* border: 1px solid rgba(199, 196, 199, 0.667); */
+    /* border-collapse: collapse; */
+    border-radius: 5px;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 45px;
+    color: rgb(105, 106, 107);
+    background-color: rgb(170, 220, 221);
 }
-table th {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #666666;
-    background-color: #dedede;
+table td{
+    text-align: center;
+    /* vertical-align: top; */
+    padding: 12px;
 }
-table td {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #666666;
-    background-color: #ffffff;
-    text-align:center;
-    vertical-align:bottom;
+table:hover{
+ background-color: rgb(140, 199, 199);
+ transform: scale(1.2);
+ transition: all .3s;
 }
-
-.input table{
-    font-family: verdana,arial,sans-serif;
-    font-size:11px;
-    color:#333333;
-    border-width: 1px;
-    border-color: #666666;
-    border-collapse: collapse;
-    width:98%;
-    margin:0 auto;
-    
+#table{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
-
-.input table th {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #666666;
-    background-color: #dedede;
+#table::-webkit-scrollbar{
+    width:0;
 }
-.input table td {
-    border-width: 1px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #666666;
-    background-color: #ffffff;
-    text-align:center;
-    vertical-align:bottom;
+#table ::-webkit-scrollbar-track{
+    display: none;
 }
-
-#zz {
-	width: 920px;
-	height:525px;
-	margin: 0 auto;
-	background-color: #F5F7E6;	
+#table::-webkit-scrollbar-button{
+    display: none;
 }

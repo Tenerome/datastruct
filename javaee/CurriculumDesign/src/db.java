@@ -160,8 +160,8 @@ public class db {
 	public static String getStuHTML(student stu,int page,int record) {//返回html表格
 		String html="";
 		List<student> students = getStudents(stu,page,record);
-		html+="<div>\n";
-		html+="<table align='center' border='2'>\n";
+		html+="<div id='table'>\n";
+		html+="<table>\n";
 		html+="<tr>";
 		html+="<th>序号</th>";
 		html+="<th>学号</th>";
@@ -172,7 +172,9 @@ public class db {
 		html+="<th>操作</th>";
 		html+="<th></th>";
 		html+="</tr>\n";
+		html+="</table>\n";
 		for(int i=0;i<students.size();i++) {
+			html+="<table>\n";
 			html+="<tr>";
 			html+="<td>"+students.get(i).getId()+"</td>";
 			html+="<td>"+students.get(i).getSno()+"</td>";
@@ -182,14 +184,13 @@ public class db {
 			html+="<td>"+students.get(i).getSgrade()+"</td>";
 			html+="<td><a href='index.jsp?operate=update.jsp&id="+students.get(i).getId()+"'>修改</a>&nbsp;&nbsp;<a href='delete?id="+students.get(i).getId()+"'>删除</a></td>";
 			html+="</tr>\n";
+			html+="</table>\n";
 		}
-		html+="</table>\n";
-		html+="<div>\n";
+		// html+="<div>\n";
 		//html+="<a href=''>第一页</a>";	
 		//html+="<a href=''>上一页</a>";	
 		//html+="<a href=''>下一页</a>";	
 		//html+="<a href=''>最后一页</a>";	
-		html+="</div>\n";
 		html+="</div>\n";
 		
 		return html;
@@ -218,7 +219,7 @@ public class db {
 	// for test
 	// public static void main(String[] args) {
 	// 	db.getConnection();
-	// 	String id="2";
-	// 	System.out.println(db.getStudentByID(id).getSmajor());
+	// 	student stu=new student("2","21231","达瓦","男","计算机","23");
+	// 	System.out.println(db.update(stu));
 	//  }
 }

@@ -12,7 +12,15 @@
 <canvas class="particles-js-canvas-el"></canvas>
 <div class="frame">
 	<br><br>
-	<br><br>
+
 <%=request.getAttribute("info")%>
 </div>
 </div> 
+<script type="text/javascript">
+	window.onload=function(){
+		var info="<%=request.getAttribute("info") %>";
+		if(info!=null)
+			alert(info);
+		<a href="index.jsp"></a>
+	}
+</script>

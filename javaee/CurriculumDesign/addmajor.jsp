@@ -10,18 +10,14 @@
 <canvas class="particles-js-canvas-el"></canvas>
 <div class="frame">
 	<br><br>
-	<br><br>
+	<h2>ADDMAJOR</h2>
 <div id="enter">
 	<form  name='entermajor' action="addmajor" method="post">
 		<div>
-			<label>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</label>
-			<input type="text" id="mname" name="mname">
-			<span class="spants">请输入学生专业</span>
+			<input type="text" id="mname" name="mname" placeholder="专业">
 		</div>
 		<div>
-			<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院：</label>
-			<input type="text" id="college" name="college">
-			<span class="spants">请输入学生所在学院</span>
+			<input type="text" id="college" name="college" placeholder="学院">
 		</div>
 			
 		<div class="addbt" style="border:0;">

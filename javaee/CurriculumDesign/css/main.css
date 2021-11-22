@@ -20,9 +20,8 @@ body{
 /* include的内容面板 */
 .frame{
 	position: absolute;
-	overflow: hidden;
 	z-index: 10;
-	left: 37%;
+	left: 35%;
 	top: 5%;
 	width: auto;
 }
@@ -163,13 +162,16 @@ float:left;
 	color: #656e5f;
 }
 #enter select{
-	width:170px;
+	width:330px;
+	height: 45px;
 	font-size:12pt;
 	text-align:left;
 	background: none;
-	border-bottom: #b1adad 2px solid;
 	padding: 5px 10px;
 	outline: none;
+	border-radius: 5px;
+	border: #c0c0c5 1px solid;
+	color: #656e5f;
 }
 #enter input:hover {
 	background:#dededf;
