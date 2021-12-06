@@ -1,8 +1,8 @@
 package com.beans;
-public class test{
+public class student{
     private int num;
     private String name;
-    public test(){
+    public student(){
         
     }
     public int getNum() {
@@ -16,9 +16,6 @@ public class test{
     }
     public void setName(String name) {
         this.name = name;
-    }
-    public static void main(String[] args) {
-        System.out.println("Hello");
     }
     
 }

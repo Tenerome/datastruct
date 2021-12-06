@@ -3,6 +3,7 @@ using namespace std;
 
 class point{
     public:
+    int x=1;
     point(){
         cout<<"构造"<<endl;
     };
@@ -16,6 +17,6 @@ void funn(){
 }
 
 int main(){
-    void (*p)()=&funn;
-    (*p)();
+    point x;
+    x->fuc(1);
 }
