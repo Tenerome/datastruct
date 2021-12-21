@@ -14,7 +14,7 @@ table td{
     padding: 12px;
 }
 table:hover{
- background-color: rgb(140, 199, 199);
+ background-color: rgb(140, 199, 167);
  transform: scale(1.2);
  transition: all .3s;
 }
@@ -22,6 +22,8 @@ table:hover{
     overflow-y: scroll;
     overflow-x: hidden;
     height: 500px;
+    padding-left: 50px;
+    padding-right: 100px;
 }
 #table::-webkit-scrollbar{
     width:0;
