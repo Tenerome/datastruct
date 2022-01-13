@@ -1,25 +1,98 @@
-//测试抛出异常
-public class test1 {
-        public static void main(String[] args) {
-            try{
-                throwChecked(-3);
-            }catch(Exception e) {
-                System.out.println(e.getMessage());
-            }
-            throwRuntime(3);
-        }
-        //该方法内抛出一个Exception异常对象，必须捕获或抛给调用者
-        public static void throwChecked(int a) throws Exception {
-            if(a < 0) {
-                throw new Exception("a的值应大于0，不符合要求");
-            }
-        }
-        //该方法内抛出一个RuntimeException对象，可以不理会直接交给JVM处理
-        public static void throwRuntime(int a) {
-            if(a < 0) {
-                throw new RuntimeException("a的值应大于0，不符合要求");
-            }
-        }
-    }
-    
+public class test1 extends Activity
+
+{
+
+Button gps_button;
+
+TextView gps_text;
+
+LocationManager mlocManager;
+
+/** Called when the activity is first created. */
+
+@Override
+
+public void onCreate(Bundle savedInstanceState)
+
+{
+
+super.onCreate(savedInstanceState);
+
+setContentView(R.layout.main);
+
+gps_button = (Button) findViewById(R.id.GPSButton);
+
+gps_text = (TextView) findViewById(R.id.GPSText);
+
+gps_button.setOnClickListener(new OnClickListener() {
+
+public void onClick(View viewParam) {
+
+gps_text.append("\n\nSearching for current location. Please hold...");
+
+gps_button.setEnabled(false);
+
+mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+
+LocationListener mlocListener = new MyLocationListener();
+
+mlocManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, 0, 0, mlocListener);
+
+}
+
+});
+
+}
+
+/* Class My Location Listener */
+
+public class MyLocationListener implements LocationListener
+
+{
+
+@Override
+
+public void onLocationChanged(Location loc)
+
+{
+
+double lon = loc.getLatitude();
+
+double lat = loc.getLongitude();
+
+gps_text.append("\nLongitude: "+lon+" - Latitude: "+lat);
+
+UseGps.this.mlocManager.removeUpdates(this);
+
+gps_button.setEnabled(true);
+
+}
+
+@Override
+
+public void onProviderDisabled(String provider) {
+
+// TODO Auto-generated method stub
+
+}
+
+@Override
+
+public void onProviderEnabled(String provider) {
+
+// TODO Auto-generated method stub
+
+}
+
+@Override
+
+public void onStatusChanged(String provider, int status, Bundle extras) {
+
+// TODO Auto-generated method stub
+
+}
+
+}
+
+}
 
