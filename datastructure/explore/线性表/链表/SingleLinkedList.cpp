@@ -127,6 +127,13 @@ void createList_R(Linkpoint &L,int n){//==尾插法==
 }
 int main(){
     Linkpoint L;
-    createList_R(L,5);
+    initList(L);
+    listInsert(L,1,3);
+    listInsert(L,1,2);
+    listInsert(L,1,5);
+    listInsert(L,1,7);
+    listInsert(L,1,1);
+    printList(L);
+    deleteElem(L,3);
     printList(L);
 }
