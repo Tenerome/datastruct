@@ -86,7 +86,7 @@ void inOrder(Threadtree &T){//test--ok，递归遍历二叉树
 int main(){
     Threadtree T,p;
     CreateTree(T);
-    inOrder(T);
+    // inOrder(T);
     InOrderThread(p,T);
     InOrderTracerse(p);
 }
