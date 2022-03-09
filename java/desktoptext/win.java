@@ -4,13 +4,8 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;//to delete
 
-<<<<<<< Updated upstream
 import javax.swing.JColorChooser;
 import javax.swing.ImageIcon;
-=======
-// import javax.swing.JColorChooser;
-import javax.swing.ImageIcon;//可以优化
->>>>>>> Stashed changes
 
 //其他组件
 import java.awt.Rectangle;
@@ -36,7 +31,6 @@ import java.io.IOException;
 
 public class win{
     public static createFrame frame=new createFrame();
-<<<<<<< Updated upstream
     public static JPanel panel;
     public static JLabel label;
     private static circlelink clink=new circlelink();
@@ -54,13 +48,6 @@ public class win{
         panel.setOpaque(true);
         panel.setSize(frame.getWidth(),frame.getHeight());
     }
-=======
-    public static createPanel panel=new createPanel();
-    public static createLabel label=new createLabel();
-    public static circlelink clink=new circlelink();
-    public static createPopupmenu traypopmenu=new createPopupmenu();
-    public static TrayIcon trayicon;
->>>>>>> Stashed changes
 
     public static void writeFile(){//写文件
         clink.init();
@@ -99,7 +86,6 @@ public class win{
         }
     }
 
-<<<<<<< Updated upstream
     public static void trayPopmenu(){//托盘弹出菜单
         PopupMenu popmenu=new PopupMenu();
         MenuItem mnext=new MenuItem("Next message");
@@ -137,16 +123,6 @@ public class win{
     public static void startPage(){
         createPanel();
         createLabel();
-=======
-    public static void setPopmenu(){//弹出菜单
-        traypopmenu.setNext(clink,label);
-        traypopmenu.setcolorChooser(panel,label);
-        traypopmenu.setExit();
-        trayicon.setPopupMenu(traypopmenu);
-    }
-
-    public static void startPage(){//起始
->>>>>>> Stashed changes
         panel.add(label);
         frame.add(panel);
         addTray();
