@@ -1,3 +1,4 @@
+package classes;
 import javax.swing.JFrame;
 import java.awt.Dimension;
 import java.awt.Rectangle;
