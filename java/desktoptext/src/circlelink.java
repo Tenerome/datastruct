@@ -1,3 +1,4 @@
+package classes;
 public class circlelink {
     private String data;//文本信息
     private int flag;//标识文件内容,-1：头尾节点，0：无内容，1：有内容
