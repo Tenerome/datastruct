@@ -5,14 +5,14 @@ import classes.*;
 // import javax.swing.JLabel;
 // import javax.swing.JButton;//to delete
 
-import javax.swing.JColorChooser;
+// import javax.swing.JColorChooser;
 import javax.swing.ImageIcon;//可以优化
 
 //其他组件
 // import java.awt.Rectangle;
 // import java.awt.Dimension;
-import java.awt.Color;
-import java.awt.Font;
+// import java.awt.Color;
+// import java.awt.Font;
 //托盘
 import java.awt.TrayIcon;
 import java.awt.SystemTray;
@@ -35,8 +35,8 @@ public class win{
     public static createPanel panel=new createPanel();
     public static createLabel label=new createLabel();
     public static circlelink clink=new circlelink();
-    public static TrayIcon trayicon;
     public static createPopupmenu traypopmenu=new createPopupmenu();
+    public static TrayIcon trayicon;
 
     public static void writeFile(){//写文件
         clink.init();
@@ -76,25 +76,9 @@ public class win{
     }
 
     public static void setPopmenu(){
-        traypopmenu.mnext.addActionListener(new ActionListener(){//下一个
-            circlelink clink2=clink;
-            public void actionPerformed(ActionEvent e){
-                clink2=clink2.getNext();
-                label.setText(clink2.getNext().getData());
-            }
-        });
-        traypopmenu.mcolor.addActionListener(new ActionListener(){//颜色
-            public void actionPerformed(ActionEvent e){
-                Color color=JColorChooser.showDialog(panel,"选取颜色", null);
-                label.setForeground(color);
-            }
-        });
-
-        traypopmenu.mexit.addActionListener(new ActionListener(){//退出
-            public void actionPerformed(ActionEvent e){
-                System.exit(0);
-            }
-        });
+        traypopmenu.setNext(clink,label);
+        traypopmenu.setColorchooser(panel,label);
+        traypopmenu.setExit();
         trayicon.setPopupMenu(traypopmenu);
     }
 
