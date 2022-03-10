@@ -1,11 +1,14 @@
-package classes;
+package src.circlelink;
+
+import javax.management.DescriptorKey;
+
 public class circlelink {
     private String data;//文本信息
     private int flag;//标识文件内容,-1：头尾节点，0：无内容，1：有内容
     private circlelink next;//下一个节点
     private int length=0;//长度
     private circlelink last;//尾节点
-    final int headrail=-1,nocontent=0,content=1;//标识符
+    public final int headrail=-1,nocontent=0,content=1;//标识符
     
 
     public circlelink(){//构造
@@ -25,7 +28,7 @@ public class circlelink {
 
     public void add(String str){//添加节点
         circlelink x=this;
-        int len=length;
+        int len=this.length;
         while(len!=0){
             len--;
             x=x.next;
@@ -37,7 +40,35 @@ public class circlelink {
         y.next=last;
         length++;
     };
+    public circlelink getI(int i){//获取第i个,从1开始
 
+
+
+        circlelink clink=this;
+        if(i>clink.length){
+            errorI();
+            return null;
+        }
+        while(i!=0){
+            clink=clink.next;
+            if(clink.flag==content){
+                i--;
+            }
+            
+           
+        }
+        if(clink.flag==headrail){
+            errorI();
+            return null;
+        }else
+        return clink;
+    }
+
+    public void errorI(){
+        System.out.println();
+        System.err.println("Position I is not available,please check I");
+        System.out.println();
+    }
     public void printLink(){//输出所有
         circlelink x=this;
         int len=length;
@@ -73,14 +104,18 @@ public class circlelink {
     public circlelink getNext(){
         return this.next;
     }
+    public int getLength(){
+        return this.length;
+    }
 
     //main
-    public static void main(String[] args) {
-        circlelink clink=new circlelink();
-        clink.init();
-        clink.add("你好");
-        clink.add("世界");
-        clink.printLink();
-    }
+    // public static void main(String[] args) {
+    //     circlelink clink=new circlelink();
+    //     clink.init();
+    //     clink.add("你好");
+    //     clink.add("世界");
+    //     // clink.printLink();
+    //     System.err.println(clink.getI(2).data);
+    // }
 }
 

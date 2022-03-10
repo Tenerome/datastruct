@@ -1,8 +1,6 @@
-package classes;
+package src.createPanel;
 import javax.swing.JPanel;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class createPanel extends JPanel {
     public createPanel(){

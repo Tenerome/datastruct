@@ -1,6 +1,4 @@
-package classes;
-import javax.swing.JLabel;
-
+package src.createLabel;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;

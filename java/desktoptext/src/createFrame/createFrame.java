@@ -1,9 +1,7 @@
-package classes;
+package src.createFrame;
 import javax.swing.JFrame;
 import java.awt.Dimension;
 import java.awt.Rectangle;
-
-import javax.swing.JFrame;
 public class createFrame extends JFrame{
     public createFrame(){
         this.setDefaultCloseOperation(3);//点击关闭，3：释放窗口资源
