@@ -26,8 +26,10 @@ public class createPopupmenu extends PopupMenu{
         mnext.addActionListener(new ActionListener(){//下一个
             circlelink clink2=clink;
             public void actionPerformed(ActionEvent e){
-                clink2=clink2.getNext();
-                label.setText(clink2.getNext().getData());
+                while(clink2.getFlag()==clink2.headrail){//跳过头尾节点
+                    clink2=clink2.getNext();
+                }
+                label.setText(clink2.getData());
             }
         });
     }

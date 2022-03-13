@@ -1,7 +1,5 @@
 package src.circlelink;
 
-import javax.management.DescriptorKey;
-
 public class circlelink {
     private String data;//文本信息
     private int flag;//标识文件内容,-1：头尾节点，0：无内容，1：有内容
@@ -15,7 +13,6 @@ public class circlelink {
         super();
         this.data="头";
         this.flag=headrail;
-        // this.next=last;
     };
 
     public void init(){//初始化
@@ -79,6 +76,19 @@ public class circlelink {
             }
             x=x.next;
         }
+    }
+    public String[] getString(){
+        circlelink x=this;
+        String[] str=new String[x.length];
+        int len=length;
+        while(len!=0){
+            if(x.flag==content){
+                str[len]=x.data;
+                len--;
+            }
+            x=x.next;
+        }
+        return str;
     }
     //getter and setter
     public void setData(String data){

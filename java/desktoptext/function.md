@@ -34,3 +34,4 @@ clink存文件的路径
     自动创建新文件
     添加是add,
     删除不是真正删除，而是flag=nocontent
+    ## 
