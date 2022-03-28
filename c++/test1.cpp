@@ -1,22 +1,26 @@
 #include"iostream"
 using namespace std;
-
-class point{
-    public:
-    int x=1;
-    point(){
-        cout<<"构造"<<endl;
-    };
-    ~point(){
-        cout<<"析构"<<endl;
-    };
-    int fuc(int x){return x+1999;};
-};
-void funn(){
-    cout<<"funn";
+char arr[10];
+void Q(int i){
+    char q=arr[i];
+    i++;
+    if(q=='0'){
+        if(arr[i]=='\0'){
+            cout<<"不接收"<<endl;
+        }else{
+            Q(i);
+        }
+    }else if(q=='1'){
+        if(arr[i]=='\0'){
+            cout<<"接收"<<endl;
+        }else{
+            Q(i);
+        }
+    }
 }
 
 int main(){
-    point x;
-    x->fuc(1);
+    int i=0;
+    cin>>arr;
+    Q(i);
 }
