@@ -1,3 +1,4 @@
+//接收以1结尾的二进制串
 #include"iostream"
 using namespace std;
 char arr[10];

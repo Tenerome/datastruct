@@ -1,34 +1,23 @@
-#include"stdio.h"
-void Q(char q);
-void Q1(char q1);
-// enum {low,high};
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <pthread.h>
 
-void Q(char q){
-    switch(q){
-        case '0':
-            Q(q);
-            break;
-        case '1':
-            Q1(q);
-            break;
-        default:
-            printf("不接受");
-    }
+void* threadFunc(void* arg){ //线程函数
+        for(int i=0;i<3;i++)
+        printf("In NEW thread\n");
+
 }
-void Q1(char q1){
-    switch(q1){
-        case '0':
-            Q(q1);
-            break;
-        case '1':
-            printf("接受");
-            break;
-        default:
-            printf("不接受");
-    }
-}
-int main(){
-    char q;
-    scanf("%c",&q);
-    Q(q);
+
+int main()
+{
+    pthread_t tid;
+    
+    pthread_create(&tid, NULL, threadFunc, NULL);
+    
+    pthread_join(tid, NULL);
+    for(int i=0;i<3;i++)
+    printf("In main thread\n"); 
+    
+    return 0;
 }
