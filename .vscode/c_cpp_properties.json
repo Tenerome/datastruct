@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/environment/mingw64/bin/gcc.exe",
+            "compilerPath": "/usr/bin/gcc",//for linux mint
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-x64"
