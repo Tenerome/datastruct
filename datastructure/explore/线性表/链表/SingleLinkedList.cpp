@@ -63,6 +63,14 @@ void getElem(Linkpoint &L,int i){//==取值==
     cout<<"第"<<i<<"个元素为:"<<p->data<<endl;
 }
 
+Linkpoint& getElem2(Linkpoint &L,int i){//取值，递归实现
+    if(i==1){
+        return L->nextp;
+    }else{
+        return getElem2(L,i-1)->nextp;
+    }
+}
+
 void locateElem(Linkpoint &L,int e){//==查找==
     Linkpoint p=L->nextp;
     int j=1;
@@ -134,6 +142,6 @@ int main(){
     listInsert(L,1,7);
     listInsert(L,1,1);
     printList(L);
-    deleteElem(L,3);
-    printList(L);
+    getElem(L,3);
+    cout<<getElem2(L,6)->data<<endl;
 }
